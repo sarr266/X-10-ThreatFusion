@@ -27,6 +27,14 @@ class ConfigMeta(type):
             return os.getenv("ABUSEIPDB_API_KEY", "")
         elif name == "URLSCAN_API_KEY":
             return os.getenv("URLSCAN_API_KEY", "")
+        elif name == "URLHAUS_API_KEY":
+            return os.getenv("URLHAUS_API_KEY", "")
+        elif name == "IPDETECTIVE_API_KEY":
+            return os.getenv("IPDETECTIVE_API_KEY", "")
+        elif name == "GETIPINTEL_CONTACT":
+            return os.getenv("GETIPINTEL_CONTACT", "")
+        elif name == "RANSOMWARE_LIVE_API_KEY":
+            return os.getenv("RANSOMWARE_LIVE_API_KEY", "")
         elif name == "REQUEST_TIMEOUT":
             return int(os.getenv("REQUEST_TIMEOUT", "10"))
         elif name == "CACHE_ENABLED":
@@ -61,8 +69,17 @@ class Config(metaclass=ConfigMeta):
         if os.getenv("URLSCAN_API_KEY", ""):
             apis["URLscan"] = True
         
-        # URLhaus doesn't require API key
+        # URLhaus is always available (no API key required)
         apis["URLhaus"] = True
+        
+        if os.getenv("IPDETECTIVE_API_KEY", ""):
+            apis["IP Detective"] = True
+        
+        if os.getenv("GETIPINTEL_CONTACT", ""):
+            apis["GetIPIntel"] = True
+        
+        if os.getenv("RANSOMWARE_LIVE_API_KEY", ""):
+            apis["Ransomware.live"] = True
         
         return apis
     
@@ -76,6 +93,10 @@ class Config(metaclass=ConfigMeta):
             "IPINFO_API_KEY": "✅" if os.getenv("IPINFO_API_KEY", "") else "❌",
             "ABUSEIPDB_API_KEY": "✅" if os.getenv("ABUSEIPDB_API_KEY", "") else "❌",
             "URLSCAN_API_KEY": "✅" if os.getenv("URLSCAN_API_KEY", "") else "❌",
+            "URLHAUS_API_KEY": "✅" if os.getenv("URLHAUS_API_KEY", "") else "❌",
+            "IPDETECTIVE_API_KEY": "✅" if os.getenv("IPDETECTIVE_API_KEY", "") else "❌",
+            "GETIPINTEL_CONTACT": "✅" if os.getenv("GETIPINTEL_CONTACT", "") else "❌",
+            "RANSOMWARE_LIVE_API_KEY": "✅" if os.getenv("RANSOMWARE_LIVE_API_KEY", "") else "❌",
         }
         return debug_info
     
