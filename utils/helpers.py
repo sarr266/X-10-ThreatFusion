@@ -164,7 +164,7 @@ Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
             
             # Display key data points (skip raw_data and complex objects)
             for key, value in data.items():
-                if key not in ["raw_data", "pulses", "reports", "services", "urls", "scans"] and value is not None:
+                if key not in ["raw_data", "pulses", "reports", "services", "urls", "scans", "intelligences"] and value is not None:
                     if isinstance(value, (str, int, float, bool)):
                         report += f"  {key.replace('_', ' ').title()}: {value}\n"
                     elif isinstance(value, list) and len(value) > 0 and isinstance(value[0], (str, int)):
@@ -434,7 +434,7 @@ Errors:             {summary['errors']} indicators
             else:
                 report += f"[{source}]\n"
                 for key, value in data.items():
-                    if key not in ["raw_data", "pulses", "reports", "services", "urls", "scans"] and value is not None:
+                    if key not in ["raw_data", "pulses", "reports", "services", "urls", "scans", "intelligences"] and value is not None:
                         if isinstance(value, (str, int, float, bool)):
                             report += f"  {key.replace('_', ' ').title()}: {value}\n"
                         elif isinstance(value, list) and len(value) > 0 and isinstance(value[0], (str, int)):
