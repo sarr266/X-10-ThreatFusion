@@ -341,9 +341,29 @@ class OTXAlienVaultAPI(BaseAPIClient):
             if not isinstance(sample, dict):
                 continue
             
+            # Normalize detections to a count
+            detections = sample.get("detections")
+            detection_count = 0
+            
+            if isinstance(detections, dict):
+                # If detections is a dict (antivirus results), count the keys
+                detection_count = len(detections)
+            elif isinstance(detections, list):
+                # If detections is a list, count the items
+                detection_count = len(detections)
+            elif isinstance(detections, int):
+                # If it's already an int, use it
+                detection_count = detections
+            elif detections is not None:
+                # Try to convert to int
+                try:
+                    detection_count = int(detections)
+                except (TypeError, ValueError):
+                    detection_count = 0
+            
             samples.append({
                 "hash": sample.get("hash"),
-                "detections": sample.get("detections"),
+                "detections": detection_count,
                 "date": sample.get("date"),
             })
         
