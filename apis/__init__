@@ -1,5 +1,5 @@
 """
-API integrations for Intelligence Aggregator
+API integrations package
 """
 
 from .virustotal import VirusTotalAPI
@@ -9,6 +9,9 @@ from .ipinfo import IPInfoAPI
 from .abuseipdb import AbuseIPDBAPI
 from .urlhaus import URLHausAPI
 from .urlscan import URLscanAPI
+from .ipdetective import IPDetectiveAPI
+from .getipintel import GetIPIntelAPI
+from .ransomware_live import RansomwareLiveAPI
 
 __all__ = [
     "VirusTotalAPI",
@@ -18,4 +21,7 @@ __all__ = [
     "AbuseIPDBAPI",
     "URLHausAPI",
     "URLscanAPI",
+    "IPDetectiveAPI",
+    "GetIPIntelAPI",
+    "RansomwareLiveAPI",
 ]
