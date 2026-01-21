@@ -1,4 +1,3 @@
-```markdown
 # Installation Guide
 
 ## Prerequisites
@@ -29,7 +28,6 @@ cp .env.example .env
 ```
 
 Edit `.env` file and add your API keys:
-
 ```env
 # Required API Keys
 VIRUSTOTAL_API_KEY=your_vt_key_here
@@ -39,9 +37,9 @@ IPINFO_API_KEY=your_ipinfo_key_here
 ABUSEIPDB_API_KEY=your_abuseipdb_key_here
 URLSCAN_API_KEY=your_urlscan_key_here
 GETIPINTEL_EMAIL=your_email_here
-# IP_DETECTIVE_API_KEY=your_ipdetective_key_here
-# URLHAUS_API_KEY=your_urlhaus_key_here
-# RANSOMWARE_LIVE_API_KEY=your_ransomwarelive_key_here
+IP_DETECTIVE_API_KEY=your_ipdetective_key_here
+URLHAUS_API_KEY=your_urlhaus_key_here
+RANSOMWARE_LIVE_API_KEY=your_ransomwarelive_key_here
 ```
 
 ### 4. Launch Application
@@ -50,6 +48,7 @@ streamlit run app.py
 ```
 
 ### 5. Access Platform
+
 Open browser at: `http://localhost:8501`
 
 ---
@@ -57,6 +56,7 @@ Open browser at: `http://localhost:8501`
 ## Usage
 
 ### Analyze Observable (IP/Domain/Hash)
+
 1. Select **"Observable (IP/Domain/Hash)"** input type
 2. Enter indicator (e.g., `8.8.8.8`, `example.com`, hash)
 3. Select intelligence sources to query
@@ -64,12 +64,14 @@ Open browser at: `http://localhost:8501`
 5. View correlated results
 
 ### Track Ransomware Group
+
 1. Select **"Threat Group"** input type
 2. Enter group name (e.g., `LockBit`, `BlackCat`)
 3. Click **"Analyze"**
 4. View group intelligence + victim domain analysis
 
 ### Batch Processing
+
 1. Select **"Batch Mode"**
 2. Upload file or paste indicators (one per line)
 3. Select sources
@@ -77,4 +79,3 @@ Open browser at: `http://localhost:8501`
 5. Export results (JSON/TXT)
 
 ---
-```
