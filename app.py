@@ -1,5 +1,5 @@
 """
-Intelligence Aggregator - Main Streamlit Application
+X-10 - Main Streamlit Application
 Integrates multiple threat intelligence sources into one place
 """
 
@@ -17,7 +17,7 @@ import time
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="🔍 Threat Intelligence Aggregator",
+    page_title="🔍 X-10 ThreatFusion",
     page_icon="🔍",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -1034,9 +1034,9 @@ def display_header():
     
     with col1:
         st.markdown("""
-        # 🛡️ **THREAT INTELLIGENCE AGGREGATOR**
-        ### Enterprise-Grade CTI Platform
-        """)
+        # <span style='color: #00D4FF; text-shadow: 0 0 10px #00D4FF;'>🔐 X-10 ThreatFusion</span>
+        ### <span style='color: #FF6B35; font-weight: bold;'>Intelligence Command Platform</span>
+        """, unsafe_allow_html=True)
         st.markdown("""
         **Real-time threat intelligence aggregation across 10 premium intelligence sources**
         
@@ -2149,8 +2149,8 @@ def main():
     # Sidebar Navigation & Info
     with st.sidebar:
         # Brand section with CTI professional styling
-        st.markdown("### 🛡️ THREAT INTEL COMMAND CENTER")
-        st.markdown("**Enterprise CTI Platform**")
+        st.markdown("### <span style='color: #00D4FF; font-weight: bold; text-shadow: 0 0 8px #00D4FF;'>🔐 X-10 ThreatFusion</span>", unsafe_allow_html=True)
+        st.markdown("**Intelligence Command Platform**")
         st.markdown("---")
         
         # Quick Stats
@@ -2181,7 +2181,7 @@ def main():
         # About section
         with st.expander("📖 About Platform", expanded=False):
             st.markdown("""
-            **Enterprise Threat Intelligence Aggregator**
+            # <span style='color: #00D4FF; font-weight: bold;'>X-10 ThreatFusion</span>
             
             Unified platform for threat intelligence correlation across 10 premium threat intelligence sources.
             
@@ -2204,7 +2204,7 @@ def main():
             - IOC Validation
             - APT/Ransomware tracking
             - OSINT investigations
-            """)
+            """, unsafe_allow_html=True)
         
         # Intelligence Sources
         with st.expander("📡 Intelligence Sources", expanded=False):
