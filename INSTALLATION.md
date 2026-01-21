@@ -29,7 +29,6 @@ cp .env.example .env
 
 Edit `.env` file and add your API keys:
 ```env
-# Required API Keys
 VIRUSTOTAL_API_KEY=your_vt_key_here
 SHODAN_API_KEY=your_shodan_key_here
 OTX_API_KEY=your_otx_key_here
