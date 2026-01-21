@@ -2,7 +2,7 @@
 
 **Intelligence Command Platform | 10 Sources. Total Control.**
 
-!(https://github.com/sarr266/Intelligence_Aggregator/blob/main/giphy.gif))
+<img src="./blob/main/giphy.gif"/>
 
 ## Overview
 
@@ -52,5 +52,6 @@ Contributions welcome! Please open an issue or submit a pull request.
 ---
 
 **X-10 ThreatFusion** - Command your intelligence, dominate the threat landscape.
+
 
 
