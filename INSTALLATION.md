@@ -78,5 +78,3 @@ Open browser at: `http://localhost:8501`
 
 ---
 ```
-
-This is concise, complete, and ready to use as `INSTALLATION.md`!
